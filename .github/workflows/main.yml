@@ -4,14 +4,12 @@ on:
       - main
 
 jobs:
-  deploy-gh-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
       # 拉取 github 仓库代码
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       # 设定 node 环境
       - name: 设置 Node.js
