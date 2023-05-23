@@ -35,6 +35,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_branch: gh_page
+          PUBLISH_REPOSITORY: imnxg/imnxg.github.io
+          publish_branch: resume
           publish_dir: ./build
           commit_message: auto deploy
