@@ -31,10 +31,10 @@ jobs:
         run: |
           yarn
           yarn build
-      - name: web deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Build and Deploy
+        uses: theme-keep/hexo-deploy-github-pages-action@master  # 使用专门部署 Hexo 到 GitHub pages 的 action
+        env:
+          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           PUBLISH_REPOSITORY: imnxg/imnxg.github.io
           BRANCH: resume
           publish_dir: ./build
