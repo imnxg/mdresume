@@ -11,10 +11,7 @@ jobs:
       # 拉取 github 仓库代码
         uses: actions/checkout@v3
         with:
-         # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
+          persist-credentials: false
 
       # 设定 node 环境
       - name: 设置 Node.js
